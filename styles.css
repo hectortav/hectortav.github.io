@@ -1,0 +1,123 @@
+.container {
+	background-color: var(--background-color);
+	width: 100%;
+	font-family: "Open Sans", sans-serif;
+}
+
+.header {
+	overflow: hidden;
+	height: 3vh;
+	padding: 2rem 1rem;
+	background-color: var(--background-color);
+}
+
+.header a {
+	float: left;
+	color: black;
+	text-align: center;
+	padding: 12px;
+	text-decoration: none;
+	font-size: 18px;
+	line-height: 25px;
+	border-radius: 4px;
+}
+
+.header a.logo {
+	flex: 0.2;
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+.header a:hover {
+	color: var(--active-color);
+}
+
+.header-right {
+	float: right;
+	padding-right: 4rem;
+}
+
+.header-links {
+	flex: 0.8;
+}
+
+.sticky {
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+.content-list {
+	padding-top: 9vh;
+	padding-bottom: 10vh;
+}
+
+.content {
+	padding-top: 2vh;
+	display: flex;
+	flex-direction: row;
+	padding-bottom: 2vh;
+}
+
+.body {
+	font-size: 1.2rem;
+	flex: 0.8;
+	margin-right: 2rem;
+}
+
+.description {
+	text-align: right;
+	flex: 0.2;
+	margin-right: 2rem;
+}
+
+.title {
+	font-size: 1.5rem;
+}
+
+.subtitle {
+	font-size: 1.3rem;
+	margin-top: 0.85rem;
+	margin-left: 2rem;
+}
+
+.header hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid black;
+	margin: 1em 0;
+	padding: 1rem;
+	margin-left: auto;
+	margin-right: auto;
+	width: 98%;
+}
+
+.content-list hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid black;
+	margin: 1em 0;
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+	float: right;
+}
+
+@media screen and (max-width: 500px) {
+	.header a {
+		float: none;
+		display: block;
+		text-align: left;
+	}
+	.header-right {
+		float: none;
+	}
+}
+
+:root {
+	--background-color: rgb(195, 255, 247);
+	--active-color: rgb(129, 175, 169);
+}
