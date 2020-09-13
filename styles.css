@@ -2,6 +2,7 @@
 	background-color: var(--background-color);
 	width: 100%;
 	font-family: "Open Sans", sans-serif;
+	color: var(--main-color);
 }
 
 .header {
@@ -9,11 +10,12 @@
 	height: 3vh;
 	padding: 2rem 1rem;
 	background-color: var(--background-color);
+	color: var(--main-color);
 }
 
 .header a {
 	float: left;
-	color: black;
+	color: var(--main-color);
 	text-align: center;
 	padding: 12px;
 	text-decoration: none;
@@ -117,7 +119,24 @@
 	}
 }
 
-:root {
+@media (prefers-color-scheme: dark) {
+	img {
+		opacity: 0.75;
+		transition: opacity 0.5s ease-in-out;
+	}
+	img:hover {
+		opacity: 1;
+	}
+}
+
+html {
+	--main-color: rgb(6, 3, 31);
 	--background-color: rgb(195, 255, 247);
+	--active-color: rgb(129, 175, 169);
+}
+
+html[data-theme="dark"] {
+	--main-color: rgb(255, 245, 245);
+	--background-color: rgb(37, 37, 37);
 	--active-color: rgb(129, 175, 169);
 }
