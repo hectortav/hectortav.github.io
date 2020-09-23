@@ -62,11 +62,14 @@
             var articles = JSON.parse(data);
             var div = document.getElementById('articles');
             for (var i = 0; i < articles.length; i++) {
-                var bottom_links = "<br/><br/><div style=\"display: flex;flex-direction:row;\">";
-                for (var j = 0; j < articles[i].links.length; j++) {
-                    bottom_links = bottom_links + "<div class=\"article-links-container\"><a class=\"article-links\" target=\"_blank\" href=" + articles[i].links[j].uri + ">" + articles[i].links[j].title + "</a></div>"
+                var bottom_links = "";
+                if (articles[i].links && articles[i].links.length > 0) {
+                    bottom_links = "<br/><br/><div style=\"display: flex;flex-direction:row;\">";
+                    for (var j = 0; j < articles[i].links.length; j++) {
+                        bottom_links = bottom_links + "<div class=\"article-links-container\"><a class=\"article-links\" target=\"_blank\" href=" + articles[i].links[j].uri + ">" + articles[i].links[j].title + "</a></div>"
+                    }
+                    bottom_links = bottom_links + "</div>"
                 }
-                bottom_links = bottom_links + "</div>"
                 div.innerHTML = div.innerHTML + "<div class='content'><div class='description'><b class='title'>" + articles[i].title + "</b><div class='subtitle'>" + articles[i].subtitle + "</div></div><div class='body'>" + articles[i].body + bottom_links + "</div></div><hr/>";
             }
         }
