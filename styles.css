@@ -104,6 +104,32 @@
 	margin-left: 2rem;
 }
 
+.article-links-container {
+    border-color: var(--main-color);
+    border-width: 0 0 0.1rem 0;
+    border-style: solid;
+    padding: 0.2rem;
+    margin-right: 1rem;
+
+    background: linear-gradient(to right, var(--highlight-color), var(--highlight-color) 50%, var(--main-color) 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 275ms ease;
+}
+
+.article-links-container:hover{
+    background-position: 0 100%;
+}
+
+.article-links {
+    color: var(--main-color);
+    text-decoration: none;
+    font-size: 110%;
+}
+
 .header hr {
 	display: block;
 	height: 1px;
@@ -146,6 +172,22 @@
 
 .active {
     background-position: 0 10%;
+}
+
+.link {
+    background-color: rgb(255, 245, 245);
+    border-color: var(--main-color);
+    border-width: 0.1rem;
+    border-style: solid;
+    border-radius: 0.5rem;
+    color: var(--main-color);
+	text-align: center;
+	text-decoration: none;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
 }
 
 @media screen and (max-width: 500px) {
