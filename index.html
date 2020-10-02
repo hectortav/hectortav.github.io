@@ -67,6 +67,13 @@
                 if (articles[i].image) {
                     image = "<img src=\"" + articles[i].image.uri + "\" alt=\"" + articles[i].image.alt + "\" width=\"" + articles[i].image.width*image_factor + "\" height=\"" + articles[i].image.height*image_factor + "\" style=\"padding-top: 1rem;\"/>";
                 }
+                var tags = "<div class=\"tag-container\">";
+                if (articles[i].tags) {
+                    for (var j = 0; j < articles[i].tags.length; j++) {
+                        tags = tags + "<div class=\"tag\"><a>" + articles[i].tags[j] + "</a></div>"
+                    }
+                }
+                tags = tags + "</div>";
                 if (articles[i].links && articles[i].links.length > 0) {
                     bottom_links = "<br/><br/><div style=\"display: flex;flex-direction:row;\">";
                     for (var j = 0; j < articles[i].links.length; j++) {
@@ -74,7 +81,7 @@
                     }
                     bottom_links = bottom_links + "</div>"
                 }
-                div.innerHTML = div.innerHTML + "<div class='content'><div class='description'><b class='title'>" + articles[i].title + "</b><div class='subtitle'>" + articles[i].subtitle + "</div></div><div class='body'>" + articles[i].body + "<br/>" + image + "<br/>" + bottom_links + "</div></div><hr/>";
+                div.innerHTML = div.innerHTML + "<div class='content'><div class='description'><b class='title'>" + articles[i].title + "</b><div class='subtitle'>" + articles[i].subtitle + "</div></div><div class='body'>" + articles[i].body + "<br/>" + image + "<br/>" + tags + "<br/>" + bottom_links + "</div></div><hr/>";
             }
         }
     </script>
