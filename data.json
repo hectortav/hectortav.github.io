@@ -1,0 +1,45 @@
+[
+	{
+		"title": "Database query optimization",
+		"subtitle": "Subset of a main memory / RAM database system (IMDB)",
+		"body": "The following study was executed as part of the course on software development for information systems in the National and Kapodistrian University of Athens. The aim of this study was to create a subset of a database that manages data entirely in the main memory. The whole task was split in three parts. In the first part we implemented a Sort Merge Join Algorithm, in the second one we performed a query analysis, similar to the one used in the SIGMOD 2018 competition, while in the last part we implemented CPU parallelization and a query optimizer. The project is hosted in GitHub and contains a Makefile for compilation.",
+		"links": [
+			{
+				"title": "Read more",
+				"uri": "https://github.com/hectortav/db-query-optimization/blob/master/Report.pdf"
+			},
+			{
+				"title": "Source code",
+				"uri": "https://github.com/hectortav/db-query-optimization"
+			}
+		]
+	},
+	{
+		"title": "Akira",
+		"subtitle": "A convolutional neural network",
+		"body": "Akira is a neural network created to simplify the NN learning experience and at the same time provide a platform for low level experimentation. Akira can be used for various tasks. Unfortunately, at the moment only a MNIST example is available.",
+		"links": [
+			{
+				"title": "Source code",
+				"uri": "https://github.com/index-zer0/akira"
+			}
+		]
+	},
+	{
+		"title": "Eudoxus redesign",
+		"subtitle": "Redesign of eudoxus.gr",
+		"body": "Eudoxus.gr is the official website that Greek university students use to acquire their books. A small project we made in about a week (with @thodmell).",
+		"image": {
+			"uri": "https://raw.githubusercontent.com/hectortav/eudoxus-redesign/master/eudoxus.png",
+			"alt": "eudoxus homepage",
+			"width": "1920",
+			"height": "1080"
+		},
+		"links": [
+			{
+				"title": "Source code",
+				"uri": "https://github.com/hectortav/eudoxus-redesign/"
+			}
+		]
+	}
+]

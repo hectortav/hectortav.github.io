@@ -58,11 +58,15 @@
     <script type="text/javascript" src="data.js"></script>
     <script type="text/javascript">
         function load() {
-
+            const image_factor = 1/5;
             var articles = JSON.parse(data);
             var div = document.getElementById('articles');
             for (var i = 0; i < articles.length; i++) {
                 var bottom_links = "";
+                var image = "";
+                if (articles[i].image) {
+                    image = "<img src=\"" + articles[i].image.uri + "\" alt=\"" + articles[i].image.alt + "\" width=\"" + articles[i].image.width*image_factor + "\" height=\"" + articles[i].image.height*image_factor + "\" style=\"padding-top: 1rem;\"/>";
+                }
                 if (articles[i].links && articles[i].links.length > 0) {
                     bottom_links = "<br/><br/><div style=\"display: flex;flex-direction:row;\">";
                     for (var j = 0; j < articles[i].links.length; j++) {
@@ -70,7 +74,7 @@
                     }
                     bottom_links = bottom_links + "</div>"
                 }
-                div.innerHTML = div.innerHTML + "<div class='content'><div class='description'><b class='title'>" + articles[i].title + "</b><div class='subtitle'>" + articles[i].subtitle + "</div></div><div class='body'>" + articles[i].body + bottom_links + "</div></div><hr/>";
+                div.innerHTML = div.innerHTML + "<div class='content'><div class='description'><b class='title'>" + articles[i].title + "</b><div class='subtitle'>" + articles[i].subtitle + "</div></div><div class='body'>" + articles[i].body + "<br/>" + image + "<br/>" + bottom_links + "</div></div><hr/>";
             }
         }
     </script>
