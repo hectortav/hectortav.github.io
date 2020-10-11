@@ -1,4 +1,16 @@
 [
+    {
+		"title": "Git and Github",
+		"subtitle": "A Git and Github tutorial for beginners",
+		"body": "Get started with the most popular version control system for source code development.",
+		"links": [
+			{
+				"title": "Read more",
+				"uri": "https://hectortav.github.io/articles/git-github.html"
+			}
+		],
+		"tags": ["git", "github", "tutorial"]
+	},
 	{
 		"title": "Database query optimization",
 		"subtitle": "Subset of a main memory / RAM database system (IMDB)",

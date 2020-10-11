@@ -84,13 +84,17 @@
 
 .body {
 	font-size: 1.2rem;
-	flex: 0.8;
+	/*flex: 0.8;*/
+	width: 80%;
+	right: 0;
 	margin-right: 2rem;
 }
 
 .description {
 	text-align: right;
-	flex: 0.2;
+	/*flex: 0.2;*/
+	width: 20%;
+	left: 0;
 	margin-right: 2rem;
 }
 
