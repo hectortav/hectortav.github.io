@@ -101,7 +101,6 @@
 .subtitle {
 	font-size: 1.3rem;
 	margin-top: 0.85rem;
-	margin-left: 2rem;
 }
 
 .article-links-container {
@@ -219,6 +218,22 @@
 	justify-content: center;
 }
 
+.code {
+	background-color: var(--background-color-darker);
+	border-radius: 2rem;
+	margin: 1rem;
+	padding: 1rem;
+	padding-left: 2rem;
+}
+
+.code .comment {
+	color: var(--main-color-transparent);
+}
+
+.hl-text {
+	color: var(--highlight-color);
+}
+
 @media screen and (max-width: 500px) {
 	.header a {
 		float: none;
@@ -244,6 +259,7 @@ html {
 	--main-color: rgb(6, 3, 31);
 	--main-color-transparent: rgb(6, 3, 31, 0.5);
 	--background-color: rgb(195, 255, 247);
+	--background-color-darker: rgb(147, 194, 1887);
 	--active-color: rgb(129, 175, 169);
 	--highlight-color: rgba(255, 0, 76, 0.8);
 }
@@ -252,6 +268,7 @@ html.dark-theme {
 	--main-color: rgb(255, 245, 245);
 	--main-color-transparent: rgb(255, 245, 245, 0.5);
 	--background-color: rgb(37, 37, 37);
+	--background-color-darker: rgb(20, 20, 20);
 	--active-color: rgb(129, 175, 169);
 	--highlight-color: rgba(255, 251, 0, 0.8);
 }
