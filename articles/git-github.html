@@ -93,8 +93,6 @@
                 </br><a class="comment"># Unstage specific files</a>
                 </br><a class="hl-text">git</a> reset file_name 
                 </div>
-            </div>
-            <div class="body" style="margin-left:2rem;">
                 <div style="text-indent:2rem;">You can make files invisible to git by creating a file called <a class="hl-text">.gitignore</a>.
                 The "dot" at the beginning of the filename, means the .gitignore is a hidden file. 
                 To show hidden files in Ubuntu, you will need to use the -a flag ( <a class="hl-text">ls -a</a> ).To ignore a file, you just need to add it in a new line of the .gitignore file.
@@ -113,12 +111,39 @@
                     <a class="hl-text">git</a> commit -m "Example commit message"
                 </div>
             </div>
-            <!--
-                git rm
-                git reset 
-                git mv
-                git log --oneline -n
-            -->
+            <div class="body" style="margin-left:2rem;">
+                <div>See past commits:</div>
+                <div class="code">
+                    <a class="comment"># List of all commits</a>
+                    </br><a class="hl-text">git</a> log
+                    </br> <a class="comment"># Commits in a more readable way</a>
+                    </br><a class="hl-text">git</a> log --oneline
+                    </br> <a class="comment"># Display only last 5 commits</a>
+                    </br><a class="hl-text">git</a> log -n 5
+                </div>
+            </div>
+            <b class="subtitle">What is Github?</b></br>
+            <div class="body" style="text-indent:2rem;">
+                Github is a website that hosts Git repositories in the cloud. Github helps 
+                developers manage their projects and collaborate on private and open-source projects.
+            </div>
+            <b class="subtitle">Create a new repository</b></br>
+            <div class="body" style="text-indent:2rem;">
+                After you create a Github account, navigate to <a href="https://github.com/new" target="_blank">https://github.com/new</a>
+                where you can create a new repository. Choose a name and whether you want your 
+                project to be Public or Private. For your first project leave "Add a README file", "Add .gitignore" and "Choose a license"
+                unchecked. Click "Create repository"!
+            </div>    
+            </br>
+            <div class="body" style="margin-left:2rem;">
+                <div>Now copy the repository link (mine is https://github.com/hectortav/test) and let's get back to the terminal:</div>
+                <div class="code">
+                    <a class="comment"># Connect your local git repository with the remote github repo</a>
+                    </br><a class="hl-text">git</a> remote add origin https://github.com/hectortav/test
+                    </br><a class="comment"># Push your local changes to github</a>
+                    </br><a class="hl-text">git</a> push origin master
+                </div>
+            </div>
         </div>
     </div>
     </div>
