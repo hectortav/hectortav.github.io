@@ -1,102 +1,104 @@
-<!DOCTYPE html>
-<html id="main" class="container">
-<title>hectortav</title>
-
-<head>
-    <link rel="stylesheet" href="styles.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600;800&display=swap" rel="stylesheet" />
-</head>
-
-<body onload="load()">
-    <div>
-        <div class="header sticky">
-            <div style="display: flex; flex-direction: row">
-                <a href="https://hectortav.github.io" class="logo">hectortav</a>
-                <div class="header-links">
-                    <div class="highlight active" style="margin-right:0.5rem;">
-                        <a href="index.html">Home</a>
+<html>
+    <head>
+        <title>hectortav</title>
+        <link rel="icon" href="https://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/terminal-icon.png" type="image/png">
+        <link rel="stylesheet" href="styles.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;400;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Inconsolata:wght@300&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="page"">
+            <div class="container">
+                <div class="content">
+                    <div class="header"><h2>Hey there! </h2><img src="https://media.giphy.com/media/IQebREsGFRXmo/giphy.gif" alt="this slowpoke moves"  width=40/></div>
+                    <h3 style="margin-top: -1rem;">My name is hector</h3>
+                    <!--<div style="margin-top: -0.5rem;"><a>English</a>/ <a style="color:var(--text-color)">Ελληνικά</a><div>-->
+                    <div class="block">
+                        <h4>§ About me</h4>
+                        <table>
+                            <tr>
+                                <td class="table-left">0.0</td>
+                                <td class="table-right">I was born in 1997 and live in Athens, Greece.</td>
+                            </tr>
+                            <tr>
+                                <td class="table-left">0.1</td>
+                                <td class="table-right">Used to be a working student at Nokia <span style="font-style: italic;">(2019 - 2020)</span>.</td>
+                            </tr>
+                            <tr>
+                                <td class="table-left">0.2</td>
+                                <td class="table-right">I am currently working on a p2p <a href="https://needit.gr/">renting start up</a>
+                                    <br /> 
+                                    and a twitter sourced news <a href="http://trend.farm/">website</a></td>
+                            </tr>
+                            <tr>
+                                <td class="table-left">0.4</td>
+                                <td class="table-right">You can find my work on <a href="https://github.com/hectortav">Github</a></td>
+                            </tr>
+                            <tr>
+                                <td class="table-left">0.5</td>
+                                <td class="table-right">Contact me <a class="tooltip" href="tavhector@gmail.com" onclick="copyURI(event)">tavhector@gmail.com<span class="tooltiptext">Copied!</span></a></td>
+                            </tr>
+                        </table>
                     </div>
-                    <div class="highlight" style="margin-right:0.5rem;">
-                        <a href="contact.html">Contact</a>
+                    <div class="block">
+                        <h4>§ Projects</h4>
+                        <table>
+                            <tr>
+                                <td class="table-left">1.0</td>
+                                <td class="table-right"><a style="text-decoration: none;"href="https://github.com/hectortav/db-query-optimization">database query optimization</a></td>
+                            </tr>
+                            <tr class="subtable">
+                                <td class="table-left">1.0</td>
+                                <td class="table-right">Subset of a main memory / RAM database system <span style="font-style: italic;">(IMDB)</span>.</td>
+                            </tr>
+                            <tr>
+                                <td class="table-left">1.1</td>
+                                <td class="table-right"><a style="text-decoration: none;" href="https://github.com/index-zer0/akira">akira</a></td>
+                            </tr>
+                            <tr class="subtable">
+                                <td class="table-left">1.1</td>
+                                <td class="table-right">A convolutional neural network in C</td>
+                            </tr>
+                            <tr>
+                                <td class="table-left">1.2</td>
+                                <td class="table-right"><a style="text-decoration: none;" href="https://github.com/hectortav/eudoxus-redesign/">eudoxus redesign</a></td>
+                            </tr>
+                            <tr class="subtable">
+                                <td class="table-left">1.2</td>
+                                <td class="table-right">Redesign of eudoxus.gr</td>
+                            </tr>
+                            <tr>
+                                <td class="table-left">1.3</td>
+                                <td class="table-right"><a style="text-decoration: none;" href="https://github.com/hectortav/ebay-clone">game alert</a></td>
+                            </tr>
+                            <tr class="subtable">
+                                <td class="table-left">1.3</td>
+                                <td class="table-right">Game discount notification app</td>
+                            </tr>
+                            <tr>
+                                <td class="table-left">1.4</td>
+                                <td class="table-right"><a style="text-decoration: none;" href="https://github.com/hectortav/game-alert">ebay clone</a></td>
+                            </tr>
+                            <tr class="subtable">
+                                <td class="table-left">1.4</td>
+                                <td class="table-right">An auction website</td>
+                            </tr>
+                        </table>
                     </div>
-                    <div class="highlight" style="margin-right:0.5rem;">
-                        <a href="https://github.com/hectortav" target="_blank">Github</a>
-                    </div>
-                    <div style="display: flex;align-items: center;">
-                        <label class="switch" style="vertical-align: middle;">
-                            <input type="checkbox" id="changeTheme" onclick="darkmode()">
-                            <span class="slider round"></span>
-                        </label>
-                    </div>
+                    <div class="credits">design inspired by <a style="text-decoration: none;" href="https://muan.co/">https://muan.co/</a></div>
                 </div>
             </div>
         </div>
-    </div>
-    <div>
-        <div id="articles" class="content-list">
-        </div>
-    </div>
-    </div>
-    <script>
-        const currentTheme = localStorage.getItem("theme");
-        if (currentTheme == "dark") {
-            main.classList.add("dark-theme");
-            document.getElementById("changeTheme").checked = true;
-        }
-        function darkmode() {
-            var checkBox = document.getElementById("changeTheme");
-            if (checkBox.checked == true) {
-                main.classList.add("dark-theme");
-                localStorage.setItem("theme", "dark");
-            } else {
-                main.classList.remove("dark-theme");
-                localStorage.setItem("theme", "light");
+        <script>
+            function copyURI(evt) {
+                evt.preventDefault();
+                navigator.clipboard.writeText(evt.target.getAttribute('href')).then(() => {
+                /* clipboard successfully set */
+                }, () => {console.error("Failed to copy link")});
             }
-        }
-    </script>
-    <script type="text/javascript" src="data.js"></script>
-    <script type="text/javascript">
-        function load() {
-            const image_factor = 1/5;
-            var articles = JSON.parse(data);
-            var div = document.getElementById('articles');
-            for (var i = 0; i < articles.length; i++) {
-                var bottom_links = "";
-                var image = "";
-                if (articles[i].image) {
-                    image = "<img src=\"" + articles[i].image.uri + "\" alt=\"" + articles[i].image.alt + "\" width=\"" + articles[i].image.width*image_factor + "\" height=\"" + articles[i].image.height*image_factor + "\" style=\"padding-top: 1rem;\"/>";
-                }
-                var tags = "<div style=\"flex-direction:column\"><div class=\"tag-container\">";
-                if (articles[i].tags) {
-                    for (var j = 0; j < articles[i].tags.length; j++) {
-                        tags = tags + "<div class=\"tag\"><a>" + articles[i].tags[j] + "</a></div><br>"
-                        if (j && j%6 === 0) {
-                            tags = tags + "</div><div class=\"tag-container\">";
-                        }
-                    }
-                }
-                tags = tags + "</div></div>";
-                if (articles[i].links && articles[i].links.length > 0) {
-                    bottom_links = "<br/><br/><div style=\"display: flex;flex-direction:row;\">";
-                    for (var j = 0; j < articles[i].links.length; j++) {
-                        bottom_links = bottom_links + "<div class=\"article-links-container\"><a class=\"article-links\" target=\"_blank\" href=" + articles[i].links[j].uri + ">" + articles[i].links[j].title + "</a></div>"
-                    }
-                    bottom_links = bottom_links + "</div>"
-                }
-                div.innerHTML = div.innerHTML + "<div class='content'><div class='description'><b class='title'>" + articles[i].title + "</b><div class='subtitle' style='text-indent:2rem;'>" + articles[i].subtitle + "</div></div><div class='body'>" + articles[i].body + "<br/>" + image + "<br/>" + tags + "<br/>" + bottom_links + "</div></div><hr/>";
-            }
-        }
-    </script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-179245360-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'UA-179245360-1');
-    </script>
-    <script data-ad-client="ca-pub-2460319464094235" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-</body>
-
+        </script>
+    </body>
+    
 </html>
