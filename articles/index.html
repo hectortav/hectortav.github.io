@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>hectortav</title>
+        <meta charset="UTF-8">
+        <link rel="icon" href="https://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/terminal-icon.png" type="image/png">
+        <link rel="stylesheet" href="../styles.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;400;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Inconsolata:wght@300&display=swap" rel="stylesheet">
+    </head>
+    <body onload="load()" onresize="load()">
+        <div class="page"">
+            <div class="container">
+                <div class="content" id="content"></div>
+            </div>
+        </div>
+        <script type="text/javascript" src="article.js"></script>
+        <script type="text/javascript" >
+            function load() {
+                const urlParams = new URLSearchParams(window.location.search);
+                const article = urlParams.get('article');
+                console.log(article);
+                data = data[article];
+                const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
+                var div = document.getElementById('content');
+                div.innerHTML = '<div class="header"><h2>' + data.title + '</h2></div>';
+                div.innerHTML += '<h3 style="margin-top: -1rem;">' + data.subtitle + '</h3>';
+                div.innerHTML += '<div style="margin-top: -0.5rem;"><a href="../index.html"><-- go back</a><div>';
+                var paragraphs = data.paragraphs;
+                var counter = 0;
+                for (let i = 0; i < paragraphs.length; i++) {
+                    let table = '<div class="block"><h4>§ ' 
+                        + paragraphs[i].title + '</h4>';
+                    if (vw > 1000) {
+                        table += '<table style="line-height:normal;">';
+                        var lines = paragraphs[i].text.split(' ');
+                        for (var j = 0; j < lines.length; j++) {
+                            table += '<tr><td class="table-left">' + counter.toString() + '</td>' 
+                                + '<td class="table-right">' + lines[j] + '</td></tr>';
+                            counter++;
+                        }
+                        table += '</table>';
+                    } else {
+                        table += '<div>' + paragraphs[i].text + '</div>';
+                    }
+                    table += '</div>';
+                    div.innerHTML += table;
+                    // div.innerHTML += '<div class="block"><h4>§ Hello</h4><table style="line-height:normal;"><tr><td class="table-left">13</td><td class="table-right">line</td></tr></table></div>';
+                }
+            }
+        </script>
+    </body>
+    
+</html>

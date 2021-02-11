@@ -1,6 +1,8 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
         <title>hectortav</title>
+        <meta charset="UTF-8">
         <link rel="icon" href="https://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/terminal-icon.png" type="image/png">
         <link rel="stylesheet" href="styles.css" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,7 +10,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;400;600;700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Inconsolata:wght@300&display=swap" rel="stylesheet">
     </head>
-    <body>
+    <body onload="load()">
         <div class="page"">
             <div class="container">
                 <div class="content">
@@ -87,6 +89,12 @@
                             </tr>
                         </table>
                     </div>
+                    <!--
+                    <div class="block">
+                        <h4>§ Articles</h4>
+                        <table id="table"></table>
+                    </div>
+                    -->
                     <div class="credits">design inspired by <a style="text-decoration: none;" href="https://muan.co/">https://muan.co/</a></div>
                 </div>
             </div>
@@ -97,6 +105,20 @@
                 navigator.clipboard.writeText(evt.target.getAttribute('href')).then(() => {
                 /* clipboard successfully set */
                 }, () => {console.error("Failed to copy link")});
+            }
+        </script>
+        <script type="text/javascript" src="articles/article.js"></script>
+        <script type="text/javascript" >
+            function load() {
+                var table = document.getElementById('table');
+                var t = "";
+                var i = 0;
+                for (const [key, value] of Object.entries(data)) {
+                    t += '<tr><td class="table-left">2.' + i + '</td>';
+                    t += '<td class="table-right"><a href="articles/index.html?article=' + key + '">' + value.title + '</a><td></tr>';
+                    i++;
+                }
+                table.innerHTML += t;
             }
         </script>
     </body>
