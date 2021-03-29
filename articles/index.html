@@ -13,44 +13,20 @@
     <body onload="load()" onresize="load()">
         <div class="page"">
             <div class="container">
-                <div class="content" id="content"></div>
+                <article class="content">
+                    <div class="header"><h2>hello world</h2></div>
+                    <h3 style="margin-top: -1rem;">hello world</h3>
+                    <div style="margin-top: -0.5rem;">
+                        <a href="../index.html">
+                            <-- go back
+                        </a>
+                    </div>
+                    <div class="block">
+                        <h4>§ paragraph</h4>
+                    </div>
+                </div>
             </div>
         </div>
-        <script type="text/javascript" src="article.js"></script>
-        <script type="text/javascript" >
-            function load() {
-                const urlParams = new URLSearchParams(window.location.search);
-                const article = urlParams.get('article');
-                console.log(article);
-                data = data[article];
-                const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
-                var div = document.getElementById('content');
-                div.innerHTML = '<div class="header"><h2>' + data.title + '</h2></div>';
-                div.innerHTML += '<h3 style="margin-top: -1rem;">' + data.subtitle + '</h3>';
-                div.innerHTML += '<div style="margin-top: -0.5rem;"><a href="../index.html"><-- go back</a><div>';
-                var paragraphs = data.paragraphs;
-                var counter = 0;
-                for (let i = 0; i < paragraphs.length; i++) {
-                    let table = '<div class="block"><h4>§ ' 
-                        + paragraphs[i].title + '</h4>';
-                    if (vw > 1000) {
-                        table += '<table style="line-height:normal;">';
-                        var lines = paragraphs[i].text.split(' ');
-                        for (var j = 0; j < lines.length; j++) {
-                            table += '<tr><td class="table-left">' + counter.toString() + '</td>' 
-                                + '<td class="table-right">' + lines[j] + '</td></tr>';
-                            counter++;
-                        }
-                        table += '</table>';
-                    } else {
-                        table += '<div>' + paragraphs[i].text + '</div>';
-                    }
-                    table += '</div>';
-                    div.innerHTML += table;
-                    // div.innerHTML += '<div class="block"><h4>§ Hello</h4><table style="line-height:normal;"><tr><td class="table-left">13</td><td class="table-right">line</td></tr></table></div>';
-                }
-            }
-        </script>
     </body>
     
 </html>

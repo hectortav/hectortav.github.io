@@ -132,8 +132,11 @@ table {
 }
 
 @media only screen and (min-width: 1000px) {
-	.credits {
+	.page {
 		width: 100%;
+	}
+
+	.credits {
 		position: absolute;
 		bottom: 0;
 		right: 0;
