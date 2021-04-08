@@ -89,12 +89,13 @@
                             </tr>
                         </table>
                     </div>
-                    <!--
                     <div class="block">
                         <h4>§ Articles</h4>
-                        <table id="table"></table>
+                        <table id="table">
+                            <tr><td class="table-left">2.0</td>
+                                <td class="table-right"><a href="articles/burnout_rumble.html">The burnout rumble.</a><td></tr>
+                        </table>
                     </div>
-                    -->
                     <div class="credits">design inspired by <a style="text-decoration: none;" href="https://muan.co/">https://muan.co/</a></div>
                 </div>
             </div>
@@ -105,20 +106,6 @@
                 navigator.clipboard.writeText(evt.target.getAttribute('href')).then(() => {
                 /* clipboard successfully set */
                 }, () => {console.error("Failed to copy link")});
-            }
-        </script>
-        <script type="text/javascript" src="articles/article.js"></script>
-        <script type="text/javascript" >
-            function load() {
-                var table = document.getElementById('table');
-                var t = "";
-                var i = 0;
-                for (const [key, value] of Object.entries(data)) {
-                    t += '<tr><td class="table-left">2.' + i + '</td>';
-                    t += '<td class="table-right"><a href="articles/index.html?article=' + key + '">' + value.title + '</a><td></tr>';
-                    i++;
-                }
-                table.innerHTML += t;
             }
         </script>
     </body>
