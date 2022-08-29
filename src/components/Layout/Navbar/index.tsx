@@ -17,7 +17,7 @@ const Navbar = (): ReactElement => {
                 {/*<div>Navbar</div>*/}
                 <div className="ml-auto">
                     <Hamburger {...{ navVisible, setNavVisible }}>
-                        <ul className="bg-background md:bg-transparent flex flex-auto md:flex-row absolute md:relative inset-0 w-full flex-col items-center justify-center overflow-y-hidden text-xl md:text-lg transition duration-150 ease-out">
+                        <ul className="bg-pink-100 md:bg-transparent flex flex-auto md:flex-row absolute md:relative inset-0 w-full flex-col items-center justify-center overflow-y-hidden text-xl md:text-lg transition duration-150 ease-out">
                             <li className="cursor-pointer">
                                 <a
                                     href="#home"

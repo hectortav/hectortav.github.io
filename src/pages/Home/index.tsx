@@ -37,16 +37,16 @@ const Home = () => {
                         <OrigamiBoat />
                     </div>
                 </div>
-                <div className="w-full sm:w-1/2 flex items-center justify-center relative min-h-[400px] md:min-h-[660px]">
+                <div className="w-full sm:w-1/2 flex relative min-h-[400px] md:min-h-[660px] mt-10 md:mt-0">
                     <img
                         src={backImageSrc}
-                        alt="town light"
-                        className="origin-center -rotate-12 md:absolute md:top-0 top-10 bottom-0 md:bottom-1/4 left-0 md:left-1/4 right-0 drop-shadow-xl w-[200px] md:w-[400px]"
+                        alt="town lights"
+                        className="origin-center -rotate-12 absolute insets-0 md:bottom-1/4 md:left-1/4 md:top-10 drop-shadow-xl w-[200px] md:w-[400px] translate-x-1/3 md:translate-x-0"
                     />
                     <img
                         src={frontImageSrc}
                         alt="nature"
-                        className="origin-center rotate-6 md:absolute md:top-0 top-10 bottom-0 left-0 md:left-1/4 right-0 drop-shadow-xl w-[200px] md:w-[400px]"
+                        className="origin-center rotate-6 absolute insets-0 md:left-1/4 drop-shadow-xl w-[200px] md:w-[400px] translate-x-1/3 md:translate-x-0"
                     />
                 </div>
             </div>

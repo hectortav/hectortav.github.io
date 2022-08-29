@@ -49,6 +49,7 @@ export const Hamburger = ({
                 style={{
                     display: navVisible ? "block" : "none",
                 }}
+                className="h-screen w-screen"
             >
                 {children}
             </div>
