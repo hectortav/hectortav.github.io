@@ -30,7 +30,7 @@ const Home = () => {
                     <div className="text-xl font-light mt-30">
                         I am a developer passionate about typescript and the
                         web. I was born in Athens, Greece and based in Brussels,
-                        Belgiums
+                        Belgium
                         {time === null ? "." : `, the local time is ${time}.`}
                     </div>
                     <div className="mt-auto text-7xl">

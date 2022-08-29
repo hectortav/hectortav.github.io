@@ -1,6 +1,6 @@
 export const getTime = (region: string, city: string) => {
     return new Promise((resolve, reject) => {
-        const url = `http://worldtimeapi.org/api/timezone/${region}/${city}`;
+        const url = `https://worldtimeapi.org/api/timezone/${region}/${city}`;
         const req = new XMLHttpRequest();
         req.open("GET", url);
         req.onload = () =>
