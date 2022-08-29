@@ -1,0 +1,60 @@
+{
+    "projects": [
+        {
+            "image": "https://github.com/index-zer0/akira/raw/master/public/a-logo.png",
+            "title": "Akira",
+            "category": "machine learning",
+            "description": "a C library for Neural Networks",
+            "uri": "https://github.com/index-zer0/akira"
+        },
+        {
+            "image": "https://camo.githubusercontent.com/87fb528dea32d1b95b52ee889bd292b19ed39c220b2b773be5257e8d1aa263e1/68747470733a2f2f706c61792d6c682e676f6f676c6575736572636f6e74656e742e636f6d2f346831436c38516568684b2d42306a476e34594b376661364a39736a7646374e574d496454477943643648396e36436831514c355f62672d393959784b4a517378535f4e3d77313434302d683632302d7277",
+            "title": "Stratos",
+            "category": "mobile application",
+            "description": "a minimalistic counter for your service in the Greek Armed Forces",
+            "uri": "https://github.com/index-zer0/stratos"
+        },
+        {
+            "image": "https://www.index-zr0.com/assets/Connection_Lost_-_Dark_.png",
+            "title": "Analytics",
+            "category": "web",
+            "description": "(WIP) Privacy first website analytics",
+            "uri": "https://github.com/index-zer0/analytics"
+        },
+        {
+            "image": "https://images.unsplash.com/photo-1597852074816-d933c7d2b988?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2970&q=80",
+            "title": "DB query optimization",
+            "category": "",
+            "description": "a database subset that manages data entirely in the main memory",
+            "uri": "https://github.com/hectortav/db-query-optimization"
+        },
+        {
+            "image": "https://images.unsplash.com/photo-1611570266137-909ab5f29bf6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2072&q=80",
+            "title": "Hermes",
+            "category": "web",
+            "description": "a persistent Redis job scheduler",
+            "uri": "https://github.com/needit-gr/hermes"
+        },
+        {
+            "image": "https://github.com/hectortav/Eudoxus/raw/master/eudoxus.png",
+            "title": "Eudoxos redesign",
+            "category": "web",
+            "description": "redesign of eudoxus.gr",
+            "uri": "https://github.com/hectortav/eudoxus-redesign/"
+        },
+        {
+            "image": "https://raw.githubusercontent.com/hectortav/Ebay_Clone/master/Screenshots/landing_page.png",
+            "title": "Ebay clone",
+            "category": "web",
+            "description": "an auction website",
+            "uri": "https://github.com/hectortav/ebay-clone"
+        },
+        {
+            "image": "https://github.com/hectortav/game-alert/raw/master/list.png",
+            "title": "Game alert",
+            "category": "web",
+            "description": "game discount notification application",
+            "uri": "https://github.com/hectortav/game-alert"
+        }
+    ]
+}
