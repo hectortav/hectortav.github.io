@@ -16,11 +16,24 @@ code {
         monospace;
 }
 
-@keyframes progress {
-    from {
-        width: 0%;
-    }
-    to {
-        width: 100%;
-    }
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f2eab6;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c9c187;
+    border-radius: 0.25rem;
+    border: 1px solid rgb(100, 116, 139);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #c9c187cc;
 }

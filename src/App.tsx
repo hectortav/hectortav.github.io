@@ -1,11 +1,11 @@
-import "./App.css";
 import { Layout } from "./components";
-import { Home, Projects } from "./pages";
+import { Home, Projects /*Github*/ } from "./pages";
 
 function App() {
     return (
         <Layout>
             <Home />
+            {/*<Github /> */}
             <Projects />
             <div style={{ height: "200px" }} />
         </Layout>
