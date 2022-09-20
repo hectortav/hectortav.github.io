@@ -39,12 +39,12 @@ const Home = () => {
                     <img
                         src={backImageSrc}
                         alt="city"
-                        className="origin-center -rotate-12 absolute insets-0 md:bottom-1/4 md:left-1/4 md:top-10 drop-shadow-xl w-[205px] md:w-[410px] translate-x-1/3 md:translate-x-0"
+                        className="origin-center -rotate-12 absolute insets-0 md:bottom-1/4 md:left-1/4 md:top-10 drop-shadow-xl w-[205px] lg:w-[307px] xl:w-[410px] translate-x-1/3 md:translate-x-0"
                     />
                     <img
                         src={frontImageSrc}
                         alt="nature"
-                        className="origin-center rotate-6 absolute insets-0 md:left-1/4 drop-shadow-xl w-[200px] md:w-[400px] translate-x-1/3 md:translate-x-0"
+                        className="origin-center rotate-6 absolute insets-0 md:left-1/4 drop-shadow-xl w-[200px] lg:w-[300px] xl:w-[400px] translate-x-1/3 lg:translate-x-0"
                     />
                 </div>
             </div>
