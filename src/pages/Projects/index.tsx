@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { Carousel, DataCardProps } from "../../components";
+import { Carousel, DataCardProps } from "@hectortav/react-carousel"; //"../../components";
+import "@hectortav/react-carousel/dist/index.css";
 
 const Projects = () => {
     const [projects, setProjects] = useState<DataCardProps[]>([]);
@@ -21,6 +22,14 @@ const Projects = () => {
                             Check out
                             <br />
                             my latest projects
+                            <br />
+                            <a
+                                target="_blank"
+                                href="https://github.com/hectortav/react-carousel"
+                                className="text-base underline text-sky-600 hover:no-underline hover:text-sky-600 "
+                            >
+                                How can I use this?
+                            </a>
                         </>
                     }
                 />
