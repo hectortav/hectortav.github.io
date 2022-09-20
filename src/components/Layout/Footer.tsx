@@ -15,6 +15,12 @@ const Footer = (): ReactElement => {
                         <a href="/Resume.pdf" target="_blank">
                             Resume
                         </a>
+                        <a
+                            href="https://github.com/hectortav/hectortav.github.io"
+                            target="_blank"
+                        >
+                            Website Source
+                        </a>
                     </div>
                 </div>
                 <div className="sm:w-1/4">
@@ -28,6 +34,68 @@ const Footer = (): ReactElement => {
                 </div>
             </div>
             <div className="mt-10">© {new Date().getFullYear()} hectortav</div>
+            <div className="flex flex-auto justify-center mt-10 flex-col sm:flex-row">
+                <div>Built with</div>
+                <div className="flex flex-row">
+                    <a
+                        className="flex align-center justify-center sm:ml-1"
+                        href="https://reactjs.org/"
+                    >
+                        React{" "}
+                        <img
+                            src="/assets/react.png"
+                            alt="react logo"
+                            width={20}
+                            height={20}
+                            className="ml-1"
+                        />
+                    </a>
+                    ,
+                    <a
+                        className="flex align-center justify-center ml-1"
+                        href="https://www.typescriptlang.org/"
+                    >
+                        TypeScript{" "}
+                        <img
+                            src="/assets/typescript.png"
+                            alt="typescript logo"
+                            width={20}
+                            height={20}
+                            className="ml-1"
+                        />
+                    </a>
+                    ,
+                </div>
+                <div className="flex flex-row">
+                    <a
+                        className="flex align-center justify-center sm:ml-1"
+                        href="https://vitejs.dev/"
+                    >
+                        Vite{" "}
+                        <img
+                            src="/assets/vite.png"
+                            alt="vite logo"
+                            width={20}
+                            height={20}
+                            className="ml-1"
+                        />
+                    </a>
+                    and
+                    <a
+                        className="flex align-center justify-center ml-1"
+                        href="https://tailwindcss.com/"
+                    >
+                        Tailwindcss
+                        <img
+                            src="/assets/tailwindcss.png"
+                            alt="tailwind logo"
+                            width={20}
+                            height={20}
+                            className="ml-1"
+                        />
+                    </a>
+                </div>
+            </div>
         </footer>
     );
 };

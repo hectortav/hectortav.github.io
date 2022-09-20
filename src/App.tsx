@@ -5,7 +5,6 @@ function App() {
     return (
         <Layout>
             <Home />
-            {/*<Github /> */}
             <Projects />
             <div style={{ height: "200px" }} />
         </Layout>
@@ -13,15 +12,3 @@ function App() {
 }
 
 export default App;
-
-/*
-const Button = () => {
-    return (
-        <button className="w-[100px] py-2 border border-black rounded">
-            Open
-        </button>
-    );
-};
- */
-
-// https://www.svgrepo.com/collection/origami-animal-line-vectors/

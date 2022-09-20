@@ -2,10 +2,8 @@ import { useState } from "react";
 import { OrigamiBoat } from "../../components";
 import { getTime } from "../../utils";
 
-const frontImageSrc =
-    "https://images.pexels.com/photos/13339565/pexels-photo-13339565.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2";
-const backImageSrc =
-    "https://images.pexels.com/photos/12233047/pexels-photo-12233047.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2";
+const frontImageSrc = "/assets/lake.png";
+const backImageSrc = "/assets/city.png";
 
 const Home = () => {
     const [time, setTime] = useState<string | null>(null);
@@ -37,11 +35,11 @@ const Home = () => {
                         <OrigamiBoat />
                     </div>
                 </div>
-                <div className="w-full sm:w-1/2 flex relative min-h-[400px] md:min-h-[660px] mt-10 md:mt-0">
+                <div className="w-full sm:w-1/2 flex relative min-h-[400px] md:min-h-[660px] mt-10 md:mt-0 hover:rotate-1 transition ease-in-out delay-75">
                     <img
                         src={backImageSrc}
-                        alt="town lights"
-                        className="origin-center -rotate-12 absolute insets-0 md:bottom-1/4 md:left-1/4 md:top-10 drop-shadow-xl w-[200px] md:w-[400px] translate-x-1/3 md:translate-x-0"
+                        alt="city"
+                        className="origin-center -rotate-12 absolute insets-0 md:bottom-1/4 md:left-1/4 md:top-10 drop-shadow-xl w-[205px] md:w-[410px] translate-x-1/3 md:translate-x-0"
                     />
                     <img
                         src={frontImageSrc}
