@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { OrigamiBoat } from "../../components";
 import { getTime } from "../../utils";
 
@@ -7,15 +7,17 @@ const backImageSrc = "/assets/city.png";
 
 const Home = () => {
     const [time, setTime] = useState<string | null>(null);
-    getTime("Europe", "Brussels")
-        .then((response: any) => {
-            const dateObj = JSON.parse(response);
-            const dateTime = dateObj.datetime;
-            setTime(dateTime.match(/(?<=T)(.*):(.*):/)[1]);
-        })
-        .catch((err) => {
-            console.log(err);
-        });
+    useEffect(() => {
+        getTime("Europe", "Brussels")
+            .then((response: any) => {
+                const dateObj = JSON.parse(response);
+                const dateTime = dateObj.datetime;
+                setTime(dateTime.match(/(?<=T)(.*):(.*):/)[1]);
+            })
+            .catch((err) => {
+                console.log(err);
+            });
+    }, []);
     return (
         <div id="home" className="border-b border-slate-400">
             <div className="flex flex-auto mt-20 flex-col sm:flex-row">

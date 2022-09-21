@@ -1,0 +1,62 @@
+import { useEffect, useState } from "react";
+
+const Readme = () => {
+    const [lines, setLines] = useState<string[]>([]);
+    useEffect(() => {
+        fetch(
+            "https://raw.githubusercontent.com/hectortav/hectortav/main/README.md"
+        )
+            .then((res) => res.text())
+            .then((text) => {
+                const markdown = text.replace(/<!--[\S\s]*-->/, "");
+                setLines(markdown.split("\n"));
+            });
+    }, []);
+    return (
+        <div id="readme" className="border-b border-slate-400">
+            <h3 className="text-lg font-light">§ Readme</h3>
+            <div className="my-10">
+                {lines.map((line, index) => {
+                    let style = {};
+                    if (line === "") {
+                        return <br key={index} />;
+                    }
+                    
+                    const linkRegEx = /\[[^\[\]]*\]\(https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)\)/
+                    if ((let match = line.match(linkRegEx)) !== null) {
+                        console.log(match)
+                    }
+                    if (
+                        line[0] === "#" &&
+                        [...new Set(line.split(" ")[0])].length === 1
+                    ) {
+                        let size;
+                        switch (line.split(" ")[0].length) {
+                            case 1:
+                                size = "2rem";
+                                break;
+                            case 2:
+                                size = "1.7rem";
+                                break;
+                            default:
+                                size = "1.5rem";
+                                break;
+                        }
+                        style = { fontSize: size };
+                        line = line.split(" ").slice(1).join(" ");
+                    }
+                    return (
+                        <div key={index} style={style}>
+                            <div
+                                className="flex flex-row"
+                                dangerouslySetInnerHTML={{ __html: line }}
+                            />
+                        </div>
+                    );
+                })}
+            </div>
+        </div>
+    );
+};
+
+export default Readme;
