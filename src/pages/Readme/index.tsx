@@ -1,16 +1,37 @@
 import { useEffect, useState } from "react";
 
+const hashCode = (str: string): number => {
+    let hash = 0,
+        i,
+        chr;
+    if (str.length === 0) return hash;
+    for (i = 0; i < str.length; i++) {
+        chr = str.charCodeAt(i);
+        hash = (hash << 5) - hash + chr;
+        hash |= 0;
+    }
+    return hash;
+};
+
 const Readme = () => {
     const [lines, setLines] = useState<string[]>([]);
     const [content, setContent] = useState<string>("");
+    const [hash, setHash] = useState<string>("");
     useEffect(() => {
         fetch(
             "https://raw.githubusercontent.com/hectortav/hectortav/main/README.md"
         )
             .then((res) => res.text())
             .then((text) => {
-                const markdown = text.replace(/<!--[\S\s]*-->/, "");
-                setLines(markdown.split("\n"));
+                const h = hashCode(text).toString()
+                const md = localStorage.getItem(h);
+                if (md === null) {
+                    const markdown = text.replace(/<!--[\S\s]*-->/, "");
+                    setLines(markdown.split("\n"));
+                    setHash(h)
+                } else {
+                    setContent(md);
+                }
             });
     }, []);
     useEffect(() => {
@@ -99,11 +120,15 @@ const Readme = () => {
             if (index === 0) {
                 line = "<div class='flex flex-row mb-2'>" + line;
             }
-            if (index === length - 1) {
+            if (index === lines.length - 1) {
                 line = line + "</div>";
             }
 
             setContent((c) => c + line);
+
+            if (index === lines.length - 1 && hash.length > 1) {
+                localStorage.setItem(hash, content);
+            }
         });
     }, [lines]);
     return (
