@@ -1,5 +1,9 @@
-import { ReactElement } from "react";
-import { OrigamiBoat } from "../Origami";
+import { ReactElement, lazy } from "react";
+const OrigamiBoat = lazy(() =>
+    import("../Origami").then((module) => ({
+        default: module.OrigamiBoat,
+    }))
+);
 
 const Footer = (): ReactElement => {
     return (

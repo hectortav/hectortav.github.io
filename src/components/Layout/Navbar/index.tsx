@@ -1,6 +1,11 @@
-import { useState, useEffect, ReactElement } from "react";
-import { Hamburger } from "./Hamburger";
-import { DarkModeSwitch } from "../../DarkMode";
+import { useState, useEffect, ReactElement, lazy } from "react";
+
+export const Hamburger = lazy(() => import("./Hamburger"));
+const DarkModeSwitch = lazy(() =>
+    import("../../DarkMode").then((module) => ({
+        default: module.DarkModeSwitch,
+    }))
+);
 
 const Navbar = (): ReactElement => {
     const [navVisible, setNavVisible] = useState<boolean>(false);

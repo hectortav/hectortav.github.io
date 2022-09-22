@@ -6,11 +6,7 @@ interface HamburgerProps {
     children: ReactNode;
 }
 
-export const Hamburger = ({
-    navVisible,
-    setNavVisible,
-    children,
-}: HamburgerProps) => {
+const Hamburger = ({ navVisible, setNavVisible, children }: HamburgerProps) => {
     return (
         <>
             <div className="hidden md:block">{children}</div>
@@ -62,3 +58,5 @@ export const Hamburger = ({
         </>
     );
 };
+
+export default Hamburger;

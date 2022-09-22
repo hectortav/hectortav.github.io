@@ -1,6 +1,7 @@
-import { ReactNode, ReactElement } from "react";
-import Navbar from "./Navbar";
-import Footer from "./Footer";
+import { ReactNode, ReactElement, lazy } from "react";
+
+const Navbar = lazy(() => import("./Navbar"));
+const Footer = lazy(() => import("./Footer"));
 
 interface LayoutProps {
     children: ReactNode;

@@ -1,5 +1,10 @@
-import { useState, useEffect } from "react";
-import { Carousel, DataCardProps } from "@hectortav/react-carousel"; //"../../components";
+import { useState, useEffect, lazy } from "react";
+import { DataCardProps } from "@hectortav/react-carousel";
+const Carousel = lazy(() =>
+    import("@hectortav/react-carousel").then((module) => ({
+        default: module.Carousel,
+    }))
+);
 import "@hectortav/react-carousel/dist/index.css";
 
 const Projects = () => {
