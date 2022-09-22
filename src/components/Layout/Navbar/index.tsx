@@ -29,6 +29,15 @@ const Navbar = (): ReactElement => {
                             <div className="w-4" />
                             <li className="cursor-pointer">
                                 <a
+                                    href="#readme"
+                                    onClick={() => setNavVisible(false)}
+                                >
+                                    Readme
+                                </a>
+                            </li>
+                            <div className="w-4" />
+                            <li className="cursor-pointer">
+                                <a
                                     href="#projects"
                                     onClick={() => setNavVisible(false)}
                                 >

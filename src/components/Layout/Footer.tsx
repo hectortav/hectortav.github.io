@@ -9,8 +9,9 @@ const Footer = (): ReactElement => {
                     <OrigamiBoat />
                 </div>
                 <div className="sm:w-1/4 my-10 sm:my-0">
-                    <div className="grid gap-4 grid-cols-2">
+                    <div className="grid gap-4 grid-cols-3">
                         <a href="#home">Home</a>
+                        <a href="#readme">Readme</a>
                         <a href="#projects">Projects</a>
                         <a href="/Resume.pdf" target="_blank">
                             Resume
