@@ -23,12 +23,12 @@ const Readme = () => {
         )
             .then((res) => res.text())
             .then((text) => {
-                const h = hashCode(text).toString()
+                const h = hashCode(text).toString();
                 const md = localStorage.getItem(h);
-                if (md === null) {
+                if (md === null || md.length === 0) {
                     const markdown = text.replace(/<!--[\S\s]*-->/, "");
                     setLines(markdown.split("\n"));
-                    setHash(h)
+                    setHash(h);
                 } else {
                     setContent(md);
                 }
