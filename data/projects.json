@@ -1,0 +1,39 @@
+{
+    "projects": [
+        {
+            "image": "https://rubik.gr/promo/rubik-social-share.jpg",
+            "title": "Rubik",
+            "category": "saas",
+            "description": "Customer loyalty program for businesses - digital stamps, points, coupons, and notifications",
+            "uri": "https://rubik.gr/"
+        },
+        {
+            "image": "/data/curaannonae.png",
+            "title": "Cura Annonae",
+            "category": "news aggregator",
+            "description": "Greek news aggregator",
+            "uri": "https://curaannonae.com/"
+        },
+        {
+            "image": "https://github.com/index-zer0/akira/raw/master/public/a-logo.png",
+            "title": "Akira",
+            "category": "machine learning",
+            "description": "a C library for Neural Networks",
+            "uri": "https://github.com/index-zer0/akira"
+        },
+        {
+            "image": "https://images.unsplash.com/photo-1597852074816-d933c7d2b988?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2970&q=80",
+            "title": "DB query optimization",
+            "category": "",
+            "description": "a database subset that manages data entirely in the main memory",
+            "uri": "https://github.com/hectortav/db-query-optimization"
+        },
+        {
+            "image": "https://images.unsplash.com/photo-1611570266137-909ab5f29bf6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2072&q=80",
+            "title": "Hermes",
+            "category": "web",
+            "description": "a persistent Redis job scheduler",
+            "uri": "https://github.com/needit-gr/hermes"
+        }
+    ]
+}
